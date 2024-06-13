@@ -14,9 +14,6 @@ await connectDB(); // call the connectDB function
 app.use(express.json());
 app.use(express.urlencoded({extended:true})); // urlencoded is used to parse the data coming from the form
 
-// setup for static files
-app.use(express.static(join(process.cwd(),'public'))); // now you can access public folder files
-
 // Routes
 app.use('/api',crudRoutes);
 
